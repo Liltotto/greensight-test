@@ -9,7 +9,7 @@ export default function VacanciesFilter() {
 	const [selectedOptionForm, setSelectedOptionForm] = useState('Not selected');
 
 	const handleSelectChange = (event) => {
-		setSelectedOption(event.target.value);
+		setSelectedOptionForm(event.target.value);
 	};
 
 	return (
@@ -20,12 +20,12 @@ export default function VacanciesFilter() {
 					<select
 						className="select-filter"
 						id="form_select"
-						value={selectedOption}
+						value={selectedOptionForm}
 						onChange={handleSelectChange} >
 						<option
 							className="select-filter__item select-filter__item_unselected"
 							value=""
-							style={{ display: selectedOption ? 'none' : 'block' }}> Not selected </option>
+							style={{ display: selectedOptionForm ? 'none' : 'block' }}> Not selected </option>
 						<option className="select-filter__item" value="1"> Full time </option>
 						<option className="select-filter__item" value="2"> Half time </option>
 						<option className="select-filter__item" value="3"> Part time </option>
