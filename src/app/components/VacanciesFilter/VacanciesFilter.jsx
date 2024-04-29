@@ -32,7 +32,7 @@ export default function VacanciesFilter() {
 					</select>
 				</div>
 
-				<Dropdown selected={selectedOption} setSelected={setSelectedOption} />
+				<Dropdown selected={selectedOptionForm} setSelected={setSelectedOptionForm} />
 				{/* <div className="vacancies__filter-item">
 					<label className="select-filter__label" for="position_select"> Position </label>
 					<select className="select-filter" id="position_select" >
