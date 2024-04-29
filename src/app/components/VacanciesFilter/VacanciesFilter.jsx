@@ -6,7 +6,7 @@ import Dropdown from "../UI/Dropdown/Dropdown";
 
 export default function VacanciesFilter() {
 
-	const [selectedOption, setSelectedOption] = useState('Not selected');
+	const [selectedOptionForm, setSelectedOptionForm] = useState('Not selected');
 
 	const handleSelectChange = (event) => {
 		setSelectedOption(event.target.value);
