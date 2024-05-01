@@ -1,4 +1,5 @@
 import VacanciesFilter from '../VacanciesFilter/VacanciesFilter';
+import VacanciesItem from '../VacanciesItem/VacanciesItem';
 import './vacanciesSection.scss';
 
 export default function VacanciesSection() {
@@ -8,7 +9,7 @@ export default function VacanciesSection() {
 				<h1 className="vacancies__title">List of vacancies</h1>
 				<VacanciesFilter />
 			</header>
-
+			<VacanciesItem />
 		</div>
 
 	)
