@@ -71,61 +71,74 @@
             text-align: left;
             cursor: pointer;
 
-            span{
-                border-bottom: 1px solid  rgb(13, 122, 217, .2);;
+            span {
+                border-bottom: 1px solid rgb(13, 122, 217, .2);
+                ;
             }
 
         }
     }
-}
 
-.select-filter::-ms-expand {
-    display: none;
-}
-
-.select-filter {
-
-    appearance: none;
-
-    outline: none;
-
-    box-sizing: border-box;
-    /* grey400 */
-    border: 1px solid rgb(205, 210, 215);
-    border-radius: 4px;
-
-    /* white */
-    background: rgb(255, 255, 255);
-
-    padding: 4px 12px 4px 12px;
-
-    cursor: pointer;
-
-    &__label {
-        /* desktop/bodyS */
-        /* desktop/bodyXSbold */
-        color: rgb(19, 19, 19);
-        //font-family: Roboto;
-        font-size: 12px;
-        font-weight: 500;
-        // line-height: 125%;
-        // letter-spacing: 0%;
-        text-align: left;
-    }
-
-    //                 <<<--- ПЕРЕПРОВЕРИТЬ ВСЕ ЭТО СРОЧНО СВЕРХУ -->>>
     &__item {
-        /* desktop/bodyS */
-        color: rgb(19, 19, 19);
-        //font-family: Roboto;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 140%;
-        letter-spacing: 0%;
-        text-align: left;
+        border-radius: 16px;
+        /* boxLight */
+        box-shadow: 0px 0px 16px 0px rgba(30, 30, 30, 0.1);
+        /* white */
+        background: rgb(255, 255, 255);
 
-        &_unselected {
-            color: rgb(172, 179, 185);
-        }
+        padding: 40px;
+
+        
     }
 }
+
+// .select-filter::-ms-expand {
+//     display: none;
+// }
+
+// .select-filter {
+
+//     appearance: none;
+
+//     outline: none;
+
+//     box-sizing: border-box;
+//     /* grey400 */
+//     border: 1px solid rgb(205, 210, 215);
+//     border-radius: 4px;
+
+//     /* white */
+//     background: rgb(255, 255, 255);
+
+//     padding: 4px 12px 4px 12px;
+
+//     cursor: pointer;
+
+//     &__label {
+//         /* desktop/bodyS */
+//         /* desktop/bodyXSbold */
+//         color: rgb(19, 19, 19);
+//         //font-family: Roboto;
+//         font-size: 12px;
+//         font-weight: 500;
+//         // line-height: 125%;
+//         // letter-spacing: 0%;
+//         text-align: left;
+//     }
+
+//     //                 <<<--- ПЕРЕПРОВЕРИТЬ ВСЕ ЭТО СРОЧНО СВЕРХУ -->>>
+//     &__item {
+//         /* desktop/bodyS */
+//         color: rgb(19, 19, 19);
+//         //font-family: Roboto;
+//         font-size: 14px;
+//         font-weight: 400;
+//         line-height: 140%;
+//         letter-spacing: 0%;
+//         text-align: left;
+
+//         &_unselected {
+//             color: rgb(172, 179, 185);
+//         }
+//     }
+// }
