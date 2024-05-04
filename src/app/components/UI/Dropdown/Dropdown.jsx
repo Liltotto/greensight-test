@@ -9,8 +9,6 @@ function Dropdown({ type, selected, setSelected }) {
 
 	const [options, setOptions] = useState(null);
 
-	//const optionsForm = ["Full time", "Half time", "Part time"];
-
 	useEffect(() => {
 		switch (type) {
 			case 'Form':
@@ -34,7 +32,6 @@ function Dropdown({ type, selected, setSelected }) {
 				{
 					isActive ? <img src="/arrows/chevronUp.svg" alt="arrow-up" /> : <img src="/arrows/chevronDown.svg" alt="arrow-down" />
 				}
-				{/* <img src="/arrows/chevronDown.svg" alt="arrow-down" /> */}
 			</div>
 			{isActive && (
 				<div className="dropdown__content">

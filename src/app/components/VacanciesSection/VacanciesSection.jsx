@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import VacanciesFilter from '../VacanciesFilter/VacanciesFilter';
-//import VacanciesItem from '../VacanciesItem/VacanciesItem';
 import VacanciesList from '../VacanciesList/VacanciesList';
 import './vacanciesSection.scss';
 

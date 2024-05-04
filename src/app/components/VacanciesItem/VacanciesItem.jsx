@@ -9,21 +9,22 @@ import { useEffect, useRef, useState } from "react";
 function VacanciesItem({ data }) {
 
     const [isExpanded, setIsExpanded] = useState(false);
-    const cardRef = useRef(null);
-    const [reducedHeight, setReducedHeight] = useState(null);
+    // const cardRef = useRef(null);
+    // const [reducedHeight, setReducedHeight] = useState(null);
 
-    useEffect(() => {
-        if(cardRef.current) {
-            setReducedHeight(cardRef.current.scrollHeight/1.1);
-        }
+    // useEffect(() => {
+    //     if(cardRef.current) {
+    //         setReducedHeight(cardRef.current.scrollHeight);
+    //     }
 
-    }, [cardRef])
+    // }, [cardRef])
 
     return (
         <div 
         className="vacancies__item"
-        ref={cardRef}
-        style={{maxHeight: isExpanded ? null : `${reducedHeight}px`}}>
+        //ref={cardRef}
+        //style={{maxHeight: isExpanded ? null : `${reducedHeight}px`}}
+        >
             <div className="vacancies__item-header">
                 <div className="vacancies__item-nameAndLogo">
                     <span className="vacancies__item-nameAndLogo-name">{data.name}</span>

@@ -5,54 +5,14 @@ const useVacanciesService = () => {
     const _apiBase = 'https://api.hh.ru/vacancies'
 
     const getAllVacancies = async () => {
-        try {
-            const result = await axios.get(_apiBase);
-            const transformedVacancies = await Promise.all(result.data.items.map(async (item) => {
-                return await _transformVacancy(item);
-            }));
-           
-            console.log(transformedVacancies);
-            //console.log(result);
-            return transformedVacancies;
-        } catch (error) {
-            console.error('Error fetching vacancies:', error);
-            throw error;
-        }
+        const result = await axios.get(_apiBase);
+        const transformedVacancies = await Promise.all(result.data.items.map(async (item) => {
+            return await _transformVacancy(item);
+        }));
+        return transformedVacancies;
+
     }
 
-    // const getAllVacancies = async () => {
-    //     try {
-    //         const response = await fetch(_apiBase);
-    //         if (!response.ok) {
-    //             throw new Error(`HTTP error! status: ${response.status}`);
-    //         }
-    //         const data = await response.json();
-    //         console.log('aaaaa');
-    //         console.log(data.items);
-
-    //         // const edited_data = [] 
-    //         // // const edited_data = data.items.map(_transformVacancy);
-    //         // data.items.map(item => {
-    //         //     edited_data.push(_transformVacancy(item))
-    //         //     return item
-
-    //         // })
-
-    //         // console.log(edited_data);
-    //         console.log(_transformVacancy(data.items[0]));
-
-    //         // try {
-    //         //     const web_url = 
-    //         // } catch (error) {
-
-    //         // }
-
-    //         return edited_data;
-    //     } catch (error) {
-    //         console.error('There has been a problem with your fetch operation:', error);
-    //         throw error;
-    //     }
-    // }
 
 
     const _transformVacancy = async (vacancy) => {

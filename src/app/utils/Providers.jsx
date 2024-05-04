@@ -1,10 +1,9 @@
 'use client'
 
-//import { ReactNode, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-//import React from "react";
+
 
 function Provider({children}) {
 
