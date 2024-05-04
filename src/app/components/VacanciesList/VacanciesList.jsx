@@ -17,6 +17,8 @@ function VacanciesList({ selectedOptionFormGlobal, selectedOptionPositionGlobal 
 
     const [filteredVacancies, setFilteredVacancies] = useState([])
 
+    const [showedVacancies, setShowedVacancies] = useState(5)
+
     useEffect(() => {
         if (selectedOptionFormGlobal === 'Not selected') {
             console.log('form ' + selectedOptionFormGlobal);
@@ -24,7 +26,7 @@ function VacanciesList({ selectedOptionFormGlobal, selectedOptionPositionGlobal 
             return
         }
 
-        const filteredData = data.filter(item => item.form === selectedOptionFormGlobal)
+        const filteredData = data.slice(0, showedVacancies).filter(item => item.form === selectedOptionFormGlobal)
         // console.log('form ' + item.form);
         // console.log('select ' + selectedOptionFormGlobal);
         setFilteredVacancies(filteredData)
@@ -39,6 +41,9 @@ function VacanciesList({ selectedOptionFormGlobal, selectedOptionPositionGlobal 
     // }, [])
 
 
+    const handleClickShowMore = () => {
+        setShowedVacancies((prev) => prev + 5)
+    }
 
 
     return (
@@ -46,7 +51,17 @@ function VacanciesList({ selectedOptionFormGlobal, selectedOptionPositionGlobal 
             {/* {error && <h1>Произошла ошибка</h1>} */}
             {isLoading && <h2>Loading...</h2>}
             {error && <h2>Произошла ошибка</h2>}
-            {isSuccess && filteredVacancies && filteredVacancies.map(item => <VacanciesItem key={item.id} data={item} />)}
+            {isSuccess && filteredVacancies && (
+                <>
+                    {filteredVacancies.slice(0, showedVacancies).map(item => <VacanciesItem key={item.id} data={item} />)}
+                    {
+                        showedVacancies < filteredVacancies.length && <button className="vacancies__list-btn" onClick={ handleClickShowMore }>Show more</button>
+                    }
+                </>
+
+            )}
+
+
 
         </div>
     );

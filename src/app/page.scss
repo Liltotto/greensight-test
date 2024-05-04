@@ -1,4 +1,122 @@
 .home{
     max-width: 1200px;
     margin: 0 auto;
+    // padding: 0 32px;
+}
+
+
+/* Extra Large Devices, Wide Screens */
+@media (min-width: 1600px) {
+
+}
+
+@media (max-width: 1599px) {
+    .home{
+        padding: 0 32px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media (max-width: 1199px) {
+    .home{
+        
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (max-width: 991px) {
+    .vacancies__item-subheader{
+        gap: 12px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media (max-width: 767px) {
+    .home{
+        max-width: 540px;
+        padding: 0 16px;
+    }
+
+    .vacancies__title{
+        font-size: 34px;
+    }
+
+    .vacancies__filter{
+        margin-top: 24px;
+        &-core{
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        &-items{
+            flex-direction: column;
+        }
+
+      
+    }
+
+    .vacancies__item{
+        padding: 20px;
+        &-header{
+            flex-direction: column;
+            align-items: normal;
+            //align-items: center;
+        }
+
+        &-nameAndLogo{
+            flex-direction: column;
+            max-width: 100%;
+            word-wrap:break-word;
+        }
+
+        &-respond{
+            margin-top: 24px;
+
+        }
+
+        &-subheader{
+            margin-top: 24px;
+            flex-direction: column;
+        }
+
+        &-requirements{
+            max-width: 100%;
+            margin-top: 16px;
+        }
+
+        &-responsibilities{
+            max-width: 100%;
+            margin-top: 16px;
+        }
+    }
+    .vacancies__item-nameAndLogo-logo{
+        order: -1;
+
+    }
+
+    .dropdown{
+        width: 100%;
+    }
+    
+    .footer{
+        flex-direction: column;
+        gap: 24px;
+        
+        &__left{
+            
+        }
+        &__right{
+            align-items: flex-start;
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width: 479px) {
+    .home{
+        max-width: 320px;
+    }
+    .footer{
+        padding: 32px 16px;
+    }
 }

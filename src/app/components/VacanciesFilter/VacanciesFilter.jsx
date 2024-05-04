@@ -10,15 +10,6 @@ export default function VacanciesFilter({ setSelectedOptionFormGlobal, setSelect
 
 	const [selectedOptionPosition, setSelectedOptionPosition] = useState('Not selected');
 
-	// useEffect(() => {
-	// 	setSelectedOptionFormGlobal(selectedOptionForm);
-	// 	setSelectedOptionPositionGlobal(selectedOptionPosition);
-	// }, [selectedOptionForm, selectedOptionPosition])
-
-	// const handleSelectChange = (event) => {
-	// 	setSelectedOptionForm(event.target.value);
-	// };
-
 	const handleClick = () => {
 		setSelectedOptionFormGlobal(selectedOptionForm);
 		setSelectedOptionPositionGlobal(selectedOptionPosition);

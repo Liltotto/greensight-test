@@ -2,7 +2,6 @@
     padding-top: 64px;
     padding-bottom: 104px;
 
-    &__header {}
 
     &__title {
         color: rgb(19, 19, 19);
@@ -88,6 +87,27 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        &-btn {
+            border: 0;
+            border-radius: 4px;
+            /* blue */
+            background: rgb(13, 122, 217);
+            padding: 8px 32px;
+
+            color: rgb(255, 255, 255);
+            //font-family: Roboto;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 190%;
+            letter-spacing: .02rem;
+            align-self: center;
+            text-align: center;
+
+            &:hover {
+                background: rgb(23, 80, 152);
+            }
+        }
     }
 
     &__item {
@@ -128,9 +148,9 @@
 
             &-logo {
                 display: block;
-                max-width: 150px;
+                max-width: 160px;
                 max-height: 40px;
-                ;
+                object-fit: contain;
             }
         }
 
@@ -148,9 +168,9 @@
 
             font-size: 15px;
             font-weight: 700;
-            line-height: 140%;
-            letter-spacing: 2%;
-            text-align: left;
+            line-height: 180%;
+            // letter-spacing: 2%;
+            // text-align: left;
 
             &:hover {
                 background: rgb(76, 76, 76);
@@ -209,7 +229,7 @@
 
         &-responsibilities {
             margin-top: 24px;
-            width: 50%;
+            max-width: 50%;
 
             &-title {
                 /* desktop/bodyMbold */
@@ -306,80 +326,3 @@
         }
     }
 }
-
-.vacancies__item-header {}
-
-.vacancies__item-nameAndLogo {}
-
-.vacancies__item-respond {}
-
-.vacancies__item-subheader {}
-
-.vacancies__item-subheader-item {}
-
-.vacancies__item-subheader-title {}
-
-.vacancies__item-subheader-info {}
-
-.vacancies__item-requirements {}
-
-.vacancies__item-requirements-title {}
-
-.vacancies__item-requirements-info {}
-
-.vacancies__item-responsibilities {}
-
-.vacancies__item-responsibilities-title {}
-
-.vacancies__item-responsibilities-info {}
-
-// .select-filter::-ms-expand {
-//     display: none;
-// }
-
-// .select-filter {
-
-//     appearance: none;
-
-//     outline: none;
-
-//     box-sizing: border-box;
-//     /* grey400 */
-//     border: 1px solid rgb(205, 210, 215);
-//     border-radius: 4px;
-
-//     /* white */
-//     background: rgb(255, 255, 255);
-
-//     padding: 4px 12px 4px 12px;
-
-//     cursor: pointer;
-
-//     &__label {
-//         /* desktop/bodyS */
-//         /* desktop/bodyXSbold */
-//         color: rgb(19, 19, 19);
-//         //font-family: Roboto;
-//         font-size: 12px;
-//         font-weight: 500;
-//         // line-height: 125%;
-//         // letter-spacing: 0%;
-//         text-align: left;
-//     }
-
-//     //                 <<<--- ПЕРЕПРОВЕРИТЬ ВСЕ ЭТО СРОЧНО СВЕРХУ -->>>
-//     &__item {
-//         /* desktop/bodyS */
-//         color: rgb(19, 19, 19);
-//         //font-family: Roboto;
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 140%;
-//         letter-spacing: 0%;
-//         text-align: left;
-
-//         &_unselected {
-//             color: rgb(172, 179, 185);
-//         }
-//     }
-// }
