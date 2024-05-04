@@ -40,6 +40,7 @@ function Dropdown({ type, selected, setSelected }) {
 				<div className="dropdown__content">
 					{options.map((option) => (
 						<div
+							key={option}
 							onClick={() => {
 								setSelected(option);
 								setIsActive(false);
